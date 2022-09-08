@@ -29,10 +29,15 @@ canvasEventos.addEventListener("mouseup", function (event) {
   seleccionado.moveTo(x, y);
 });
 
-canvasEventos.addEventListener("keypress", function (event) {
-  console.log(event.key);
-  var x = event.pageX + 15 - elemLeft,
-    y = event.pageY + 15 - elemTop;
-  if (event.key == "ArrowUp") 
-  seleccionado.moveTo(x, y);
-});
+document.body.addEventListener("keydown", onKeyDown);
+function onKeyDown(event) {
+  if (seleccionado != undefined) {
+    var x = seleccionado.posX,
+      y = seleccionado.posY;
+    if (event.key == "ArrowUp") seleccionado.moveTo(x, y -10);
+    if (event.key == "ArrowDown") seleccionado.moveTo(x, y + 10);
+    if (event.key == "ArrowLeft") seleccionado.moveTo(x - 10, y);
+    if (event.key == "ArrowRight") seleccionado.moveTo(x + 10, y);
+  }
+}
+
