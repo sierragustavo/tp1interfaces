@@ -17,8 +17,6 @@ canvasEventos.addEventListener("mousedown", function (event) {
   figuras.forEach(function (element) {
     if (element.estaSeleccionado(x, y)) {
       seleccionado = element;
-    } else {
-      seleccionado = undefined;
     }
   });
 });
@@ -34,10 +32,15 @@ function onKeyDown(event) {
   if (seleccionado != undefined) {
     var x = seleccionado.posX,
       y = seleccionado.posY;
-    if (event.key == "ArrowUp") seleccionado.moveTo(x, y -10);
+    if (event.key == "ArrowUp") seleccionado.moveTo(x, y - 10);
     if (event.key == "ArrowDown") seleccionado.moveTo(x, y + 10);
     if (event.key == "ArrowLeft") seleccionado.moveTo(x - 10, y);
     if (event.key == "ArrowRight") seleccionado.moveTo(x + 10, y);
   }
 }
 
+function dibujarMultiple() {
+  cantidad = document.getElementById("input-cantidad").value;
+  console.log();
+  if (cantidad > 0) console.log(cantidad);
+}
