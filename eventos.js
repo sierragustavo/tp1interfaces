@@ -45,16 +45,16 @@ function dibujarMultiple() {
   if (cantidad > 0) {
     for (let i = 0; i < cantidad; i++) {
       if (i % 2 == 0) {
-        agregarFiguraConTimeout(true);
+        agregarFiguraConTimeout(true,i);
       } else {
-        agregarFiguraConTimeout(false);
+        agregarFiguraConTimeout(false,i);
       }
     }
   }
 }
 
-function agregarFiguraConTimeout(forma) {
+function agregarFiguraConTimeout(forma,i) {
   setTimeout(function () {
     dibujar(forma);
-  }, 100);
+  }, i*1000);
 }
