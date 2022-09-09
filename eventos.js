@@ -42,6 +42,19 @@ function onKeyDown(event) {
 
 function dibujarMultiple() {
   cantidad = document.getElementById("input-cantidad").value;
-  console.log();
-  if (cantidad > 0) console.log(cantidad);
+  if (cantidad > 0) {
+    for (let i = 0; i < cantidad; i++) {
+      if (i % 2 == 0) {
+        agregarFiguraConTimeout(true);
+      } else {
+        agregarFiguraConTimeout(false);
+      }
+    }
+  }
+}
+
+function agregarFiguraConTimeout(forma) {
+  setTimeout(function () {
+    dibujar(forma);
+  }, 100);
 }
