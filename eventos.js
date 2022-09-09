@@ -39,22 +39,3 @@ function onKeyDown(event) {
     if (event.key == "ArrowRight") seleccionado.moveTo(x + 10, y);
   }
 }
-
-function dibujarMultiple() {
-  cantidad = document.getElementById("input-cantidad").value;
-  if (cantidad > 0) {
-    for (let i = 0; i < cantidad; i++) {
-      if (i % 2 == 0) {
-        agregarFiguraConTimeout(true,i);
-      } else {
-        agregarFiguraConTimeout(false,i);
-      }
-    }
-  }
-}
-
-function agregarFiguraConTimeout(forma,i) {
-  setTimeout(function () {
-    dibujar(forma);
-  }, i*1000);
-}
