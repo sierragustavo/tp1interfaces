@@ -40,3 +40,8 @@ function onKeyDown(event) {
   }
 }
 
+function dibujarMultiple() {
+  cantidad = document.getElementById("input-cantidad").value;
+  console.log();
+  if (cantidad > 0) console.log(cantidad);
+}

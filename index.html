@@ -2,15 +2,33 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Practico 1 - Interfaces
-    </title>
+    <title>Practico 1 - Interfaces</title>
   </head>
   <body>
-    <canvas id="canvas" width="500" height="500" style="border: 1px solid black"></canvas>
+    <canvas
+      id="canvas"
+      width="500"
+      height="500"
+      style="border: 1px solid black"
+    ></canvas>
     <div>
-      <button id="boton-rectangulo" onclick="dibujar(true)">Dibujar Rectangulo al azar</button>
+      <button id="boton-rectangulo" onclick="dibujar(true)">
+        Dibujar Rectangulo al azar
+      </button>
+      <button id="boton-circulo" onclick="dibujar(false)">
+        Dibujar circulo al azar
+      </button>
 
-      <button id="boton-circulo" onclick="dibujar(false)">Dibujar circulo al azar</button>
+      <div>
+        <button id="boton-multiple" onclick="dibujarMultiple()">
+          Dibujar multiple figuras
+        </button>
+        <input
+          type="text"
+          id="input-cantidad"
+          placeholder="Cantidad de figuras"
+        />
+      </div>
     </div>
   </body>
 
